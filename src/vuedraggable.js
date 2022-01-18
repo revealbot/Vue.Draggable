@@ -284,7 +284,7 @@ const draggableComponent = {
       if (this.noneFunctionalComponentMode) {
         return this.$children[0].$slots.default;
       }
-      const rawNodes = this.$slots.default;
+      const rawNodes = this.$slots.default[0].children;
       return this.transitionMode ? rawNodes[0].child.$slots.default : rawNodes;
     },
 
